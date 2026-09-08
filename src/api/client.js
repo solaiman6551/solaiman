@@ -6,7 +6,6 @@ const api = axios.create({
   baseURL: API_URL,
   headers: {
     'ngrok-skip-browser-warning': '69420', // Bypasses ngrok's warning page for API requests
-    'Content-Type': 'application/json',
   },
 });
 
