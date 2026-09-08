@@ -122,9 +122,23 @@ export const education = [
     description: 'Placed 3rd on the admission test merit list. Coursework includes Data Mining, Software Testing, Cryptography, and MIS.',
   },
   {
-    org: 'North South University (NSU)',
+    org: 'North South University',
     degree: 'BSc in Computer Science & Engineering',
     period: 'May 2013 - Aug 2018',
     description: 'Thesis: A Queuing Theory Based Algorithm for Parking Space Sharing',
   },
+];
+
+
+export const researchInterests = [
+  "Machine Learning",
+  "Artificial Intellegence",
+  "Data Analytics",
+  "Big Data",
+  "Health Informatics",
+  "Computer-Aided Diagnosis",
+  "HCI",
+  "Software Engineering",
+  "API Governance",
+  "OAuth Security",
 ];

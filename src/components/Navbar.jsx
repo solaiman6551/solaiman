@@ -1,5 +1,6 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useTheme } from './ThemeContext';
+import { useAuth } from '../context/AuthContext';
 import CommandPalette from './CommandPalette';
 
 const links = [
@@ -13,6 +14,13 @@ const links = [
 
 export default function Navbar() {
   const { theme, toggle } = useTheme();
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  function handleLogout() {
+    logout();
+    navigate('/');
+  }
 
   return (
     <header className="topbar">
@@ -22,6 +30,14 @@ export default function Navbar() {
             {l.label}
           </NavLink>
         ))}
+        {user ? (
+          <>
+            <NavLink to="/dashboard" className={({ isActive }) => (isActive ? 'active' : '')}>DASHBOARD</NavLink>
+            <button className="link-btn" style={{ color: 'red' }} onClick={handleLogout}>LOGOUT</button>
+          </>
+        ) : (
+          <NavLink to="/login" className={({ isActive }) => (isActive ? 'active' : '')}>LOGIN</NavLink>
+        )}
       </nav>
       <div className="topbar-actions">
         <CommandPalette />
