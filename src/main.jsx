@@ -8,7 +8,7 @@ import './index.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/solaiman.github.io">
+    <BrowserRouter basename="/solaiman">
       <ThemeProvider>
         <AuthProvider>
           <App />
