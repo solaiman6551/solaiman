@@ -5,7 +5,7 @@ const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
 const api = axios.create({
   baseURL: API_URL,
   headers: {
-    'ngrok-skip-browser-warning': 'true', // Bypasses ngrok's warning page for API requests
+    'ngrok-skip-browser-warning': '69420', // Bypasses ngrok's warning page for API requests
     'Content-Type': 'application/json',
   },
 });
