@@ -23,6 +23,8 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
         run: npm run build
         # No VITE_BASE needed: this is a user-page repo
         # (solaiman6551.github.io), served at the domain root, so
