@@ -46,7 +46,6 @@ export default function About() {
         </div>
         <figure className="avatar-figure">
           <img src={profile.avatar || '/avatar.png'} alt={profile.name} className="avatar-placeholder" />
-          <figcaption>{profile.role}</figcaption>
         </figure>
       </section>
 
